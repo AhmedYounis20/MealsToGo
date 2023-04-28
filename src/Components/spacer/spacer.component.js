@@ -1,36 +1,34 @@
 import React from "react";
-import { View } from "react-native";
 import styled, { useTheme } from "styled-components/native";
 
-
 const positionVariant = {
-    top: "marginTop",
-    left: "marginLeft",
-    right: "marginRight",
-    bottom: "marginButtom",
-}
+  top: "marginTop",
+  left: "marginLeft",
+  right: "marginRight",
+  bottom: "marginButtom",
+};
 const sizeVariant = {
-    small: 1,
-    medium: 2,
-    large: 3,
-}
+  small: 1,
+  medium: 2,
+  large: 3,
+  xl:4
+};
 
-    const getVariant=(position,size,theme )=>{
-        const sizeIndex= sizeVariant[size];
-        const positionIndex = positionVariant[position];
-        const space= theme.space[sizeIndex];
-        console.log("-------------------------------------\n"+`${positionVariant[position]}:${sizeVariant[size]}`);
+const getVariant = (position, size, theme) => {
+  const sizeIndex = sizeVariant[size];
+  const positionIndex = positionVariant[position];
+  const space = theme.space[sizeIndex];
+  
+  return `${positionVariant[position]}:${space}`;
+};
 
-        return `${positionVariant[position]}:${space}`;
-    }
+const SpaceView = styled.View`
+  ${({ variant }) => variant}
+`;
 
-const SpaceView= styled.View` ${({variant }) => variant}`; 
+export const Spacer = ({ position, size, children }) => {
+  const theme = useTheme();
+  const variant = getVariant(position, size, theme);
 
-export const Spacer =({position, size,children})=>{
-    const theme = useTheme();
-    const variant = getVariant(position,size,theme);
-
-    return (<SpaceView variant={variant}>
-        {children}
-    </SpaceView>);
-}
+  return <SpaceView variant={variant}>{children}</SpaceView>;
+};
