@@ -2,12 +2,12 @@ export const restaurants = [
   {
     name: "Birdcage",
     photos: [
-      "https://cairowestmag.com/wp-content/uploads/2019/07/Ready-template-vertical-1-1.jpg"
+      "https://cairowestmag.com/wp-content/uploads/2019/07/Ready-template-vertical-1-1.jpg",
     ],
     address: "Semiramis InterContinental Hotel, Corniche El Nile",
     rating: 4.5,
-    isOpenNow:true,
-    isClosedTemporarily:false
+    isOpenNow: true,
+    isClosedTemporarily: false,
   },
   {
     name: "Raj",
@@ -16,9 +16,8 @@ export const restaurants = [
     ],
     address: "Al Matar, El Nozha, Cairo Governorate",
     rating: 4.5,
-    isOpenNow:false,
-    isClosedTemporarily:true
-
+    isOpenNow: false,
+    isClosedTemporarily: true,
   },
   {
     name: "Indira Indian Restaurant",
@@ -27,8 +26,8 @@ export const restaurants = [
     ],
     address: " Ali Rashed, Masaken Al Mohandesin, Heliopolis",
     rating: 4.4,
-    isOpenNow:true,
-    isClosedTemporarily:false
+    isOpenNow: true,
+    isClosedTemporarily: false,
   },
   {
     name: "Maat",
@@ -37,8 +36,8 @@ export const restaurants = [
     ],
     address: "Street Biota, Abou El Feda, Mohammed Mazhar, Zamalek",
     rating: 4.6,
-    isOpenNow:true,
-    isClosedTemporarily:false,
+    isOpenNow: true,
+    isClosedTemporarily: false,
   },
   {
     name: "Sachi Heliopolis",
@@ -47,7 +46,7 @@ export const restaurants = [
     ],
     address: "3, Cleopatra St،, Korba،El-Montaza،, Heliopolis",
     rating: 4.6,
-    isOpenNow:false,
-    isClosedTemporarily:true,
+    isOpenNow: false,
+    isClosedTemporarily: true,
   },
 ];
